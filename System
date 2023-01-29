@@ -1,0 +1,104 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local KeyHere = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local GetKey = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Enter = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local UIGradient = Instance.new("UIGradient")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+Frame.Position = UDim2.new(0.17757009, 0, 0.273622036, 0)
+Frame.Size = UDim2.new(0, 551, 0, 279)
+
+UICorner.CornerRadius = UDim.new(0.100000001, 0)
+UICorner.Parent = Frame
+
+KeyHere.Name = "KeyHere"
+KeyHere.Parent = Frame
+KeyHere.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KeyHere.Position = UDim2.new(0.201451898, 0, 0.26523298, 0)
+KeyHere.Size = UDim2.new(0, 329, 0, 50)
+KeyHere.Font = Enum.Font.RobotoMono
+KeyHere.Text = "Key Here"
+KeyHere.TextColor3 = Color3.fromRGB(0, 0, 0)
+KeyHere.TextScaled = true
+KeyHere.TextSize = 14.000
+KeyHere.TextWrapped = true
+
+UICorner_2.CornerRadius = UDim.new(0.5, 0)
+UICorner_2.Parent = KeyHere
+
+GetKey.Name = "GetKey"
+GetKey.Parent = Frame
+GetKey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GetKey.Position = UDim2.new(0.317604363, 0, 0.508960545, 0)
+GetKey.Size = UDim2.new(0, 200, 0, 50)
+GetKey.Font = Enum.Font.Michroma
+GetKey.Text = "Get Key"
+GetKey.TextColor3 = Color3.fromRGB(0, 0, 0)
+GetKey.TextScaled = true
+GetKey.TextSize = 14.000
+GetKey.TextWrapped = true
+GetKey.MouseButton1Click:Connect(function()
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Copied!"; Text = "PASTE IT ON SEARCH !"; Icon = "rbxassetid://9327507243"; Duration = 10 })
+	wait(0.7)
+	setclipboard("https://controlc.com/87786f96")
+end)
+
+
+UICorner_3.CornerRadius = UDim.new(0.5, 0)
+UICorner_3.Parent = GetKey
+
+Enter.Name = "Enter"
+Enter.Parent = Frame
+Enter.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Enter.Position = UDim2.new(0.319419235, 0, 0.759856582, 0)
+Enter.Size = UDim2.new(0, 200, 0, 50)
+Enter.Font = Enum.Font.Michroma
+Enter.Text = "Enter"
+Enter.TextColor3 = Color3.fromRGB(0, 0, 0)
+Enter.TextScaled = true
+Enter.TextSize = 14.000
+Enter.TextWrapped = true
+Enter.MouseButton1Click:Connect(function()
+	if KeyHere.Text == "v4IGYi0uz]F)4%p" or "w@#lnzDQaJ/u)<^" or "O2U,c)4hXQ}R<qu" or "^R<4kyxNO_3GET:" or "EtgLMs5,y18`(h6" or "Os,]dpqpTm5AT)6" then
+		Frame.Visible = false
+		wait(0.5)
+		loadstring(game:HttpGet('https://script.karmapanda.dev/'))()
+	end
+end)
+
+UICorner_4.CornerRadius = UDim.new(0.5, 0)
+UICorner_4.Parent = Enter
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.121597096, 0, 0.0358422957, 0)
+Title.Size = UDim2.new(0, 408, 0, 50)
+Title.Font = Enum.Font.Gotham
+Title.Text = "Key System for acess script"
+Title.TextColor3 = Color3.fromRGB(255, 0, 0)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(88, 88, 88))}
+UIGradient.Rotation = 90
+UIGradient.Parent = Frame
